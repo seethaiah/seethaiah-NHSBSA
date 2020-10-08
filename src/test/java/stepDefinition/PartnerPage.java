@@ -17,6 +17,12 @@ public class PartnerPage  {
 	WebDriver driver = Hooks.driver;
 
 	
+	/**
+	 * User selects the yes or no radio button for as.
+	 *
+	 * @param partner the partner
+	 * @throws Throwable the throwable
+	 */
 	@Given("^User selects the Yes or No radio button as \"([^\"]*)\"$")
 	public void user_selects_the_Yes_or_No_radio_button_for_as(String partner) throws Throwable {
 		PartnerPagePO partnerPagePO = PageFactory.instantiatePage(driver, PartnerPagePO.class);

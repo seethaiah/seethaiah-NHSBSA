@@ -12,6 +12,8 @@ public class PartnerPagePO  extends WebDriverBase{
 	
 	/** The sign in link. */
 	private static String PYesRadioButton = getLocator("PYesRadioButton");
+	
+	/** The P no radio button. */
 	private static String PNoRadioButton = getLocator("PNoRadioButton");
 
 	

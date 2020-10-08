@@ -16,12 +16,23 @@ public class HomePage  {
 	/** The driver. */
 	WebDriver driver = Hooks.driver;
 
+	/**
+	 * User is on homepage.
+	 *
+	 * @param url the url
+	 * @throws Throwable the throwable
+	 */
 	@Given("^User is on Homepage \"([^\"]*)\"$")
 	public void user_is_on_Homepage(String url) throws Throwable {
 		HomePagePO homePagePO = PageFactory.instantiatePage(driver, HomePagePO.class);
 		homePagePO.getHomePage(url);
 	}
 
+	/**
+	 * User clicks on start button.
+	 *
+	 * @throws Throwable the throwable
+	 */
 	@Given("^User clicks on Start Button$")
 	public void user_clicks_on_Start_Button() throws Throwable {
 		HomePagePO homePagePO = PageFactory.instantiatePage(driver, HomePagePO.class);

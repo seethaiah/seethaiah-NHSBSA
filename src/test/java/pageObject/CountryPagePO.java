@@ -13,10 +13,17 @@ public class CountryPagePO  extends WebDriverBase{
 	
 	/** The sign in link. */
 	private static String CRadioButton = getLocator("CRadioButton");
+	
+	/** The C next button. */
 	private static String CNextButton = getLocator("CNextButton");
 
 	
 
+	/**
+	 * Gets the title.
+	 *
+	 * @return the title
+	 */
 	public void getTitle() {
 		waitForPageToLoad();
 		assertTrue(driver.getTitle().contains("Which country do you live in?"));
@@ -33,6 +40,9 @@ public class CountryPagePO  extends WebDriverBase{
 	      
 	}
 	
+	/**
+	 * Click next button.
+	 */
 	public void clickNextButton() {
 		waitForPageToLoad();
 		  wait(Until.elementsToBePresent(CNextButton));

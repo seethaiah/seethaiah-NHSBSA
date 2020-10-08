@@ -6,17 +6,25 @@ import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 import java.util.UUID;
 
+// TODO: Auto-generated Javadoc
 /**
+ * The Class ReportMerger.
  */
 
 
 public class ReportMerger {
+    
+    /** The report file name. */
     private static String reportFileName = "report.js";
+    
+    /** The report image extension. */
     private static String reportImageExtension = "png";
 
     /**
-     * @param args
-     * @throws Throwable
+     * The main method.
+     *
+     * @param args the arguments
+     * @throws Throwable the throwable
      */
     public static void main(String[] args) throws Throwable {
         File reportDirectory = new File(args[0]);
@@ -27,9 +35,10 @@ public class ReportMerger {
     }
 
     /**
-     * Merge all reports together into master report in given reportDirectory
-     * @param reportDirectory
-     * @throws Throwable
+     * Merge all reports together into master report in given reportDirectory.
+     *
+     * @param reportDirectory the report directory
+     * @throws Throwable the throwable
      */
     public void mergeReports(File reportDirectory) throws Throwable {
         Collection<File> existingReports = FileUtils.listFiles(reportDirectory, new String[]{"js"}, true);
